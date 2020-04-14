@@ -1,0 +1,45 @@
+<form>
+    <view class="container">
+        <view class="item">
+            <view class="item-header"><text>第一步：</text>请选择人员类型</view>
+            <view class="item-content">
+                <radio-group class="radio-group" bindchange="radioChange">
+                    <label class="radio-group__label">
+                        <radio class="radio-group__radio" value="1" />职工
+                    </label>
+                    <view> </view>
+
+                    <label class="radio-group__label">
+                        <radio class="radio-group__radio" value="2" />病人
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="item-header"><text>第二步：</text>请输入{{personnelNumberTitle}}后点击校验按钮</view>
+            <view class="item-content">
+                <input class="input" placeholder-class="placeholder-class" name="personnelNumber" placeholder="请在此处输入{{personnelNumberTitle}}" />
+                <view class="item-content-button">校 验</view>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="item-header"><text>第三步：</text>请输入手机号码</view>
+            <view class="item-content">
+                <input class="input" placeholder-class="placeholder-class" name="phoneNumber" placeholder="请在此处输入手机号码" />
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="item-header"><text>第四步：</text>请点击获取验证码按钮后输入短信验证码</view>
+            <view class="item-content">
+                <input class="input" placeholder-class="placeholder-class" name="validationCode" placeholder="请在此处输入验证码" />
+                <view class="item-content-button">获取验证码</view>
+            </view>
+        </view>
+    </view>
+    <view class="button-group">
+        <button class="button-ok">确认绑定</button>
+    </view>
+</form>

@@ -1,0 +1,75 @@
+<!-- 主订单 -->
+<view class="order">
+    <!-- 订单头部 -->
+    <view class="order-header">
+        <view class="order-header-title">
+            <image class="order-number-img" src="../../assets/images/order-number.png" />
+            <view class="order-number">订单号：{{orderList.order_number}}</view>
+            <view class="order-status status0">{{orderList.order_status}}</view>
+        </view>
+        <view class="order-header-address">
+            <image class="order-address-img" src="../../assets/images/order-address.png" />
+            <text space="emsp">地 址：</text>
+            <text class="order-address">{{orderList.order_address}}</text>
+        </view>
+        <view class="order-header-content">
+            <view class="order-time">{{orderList.order_time}}</view>
+            <view class="order-payment-type">{{orderList.order_payment_type}}</view>
+            <view class="order-subtotal">¥{{orderList.order_subtotal}}</view>
+        </view>
+    </view>
+    <!-- 订单详情 -->
+    <view class="item-content" wx:for='{{orderList.order_details}}' wx:for-item='meal' wx:key='index'>
+        <view class="item-title">
+            <view class="item-date">{{meal.order_date}} {{meal.order_meal}}</view>
+            <view class="item-total">¥{{meal.meal_subtotal}}</view>
+        </view>
+        <view class="item-detail" wx:for='{{meal.goods_details}}' wx:for-item='goods' wx:key='goods_id'>
+            <view class="goods-img">
+                <image src="{{goods.goods_image}}">
+                </image>
+            </view>
+            <view class="item-info">
+                <view class="goods-name">{{goods.goods_name}}</view>
+                <view class="item-subtotal">
+                    <view class="goods-price">¥{{goods.goods_price}} * {{goods.goods_count}}{{goods.goods_unit}}</view>
+                    <view class="goods-subtotal">¥{{goods.goods_subtotal}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 主订单中的退单 -->
+<view class="refund">
+    <view class="refund-header">
+        <view class="refund-header-line"></view>
+        <view class="refund-header-title">退单信息</view>
+        <view class="refund-header-total">¥-{{refundList.refund_total}}</view>
+    </view>
+    <block wx:for='{{refundList.refund_details}}' wx:for-item='refund_detail' wx:key='refund_number'>
+        <view class="refund-content">
+            <view class="refund-num">{{refund_detail.refund_number}}</view>
+            <view class="refund-time">{{refund_detail.refund_time}}</view>
+            <view class="refund-subtotal">¥-{{refund_detail.refund_subtotal}}</view>
+        </view>
+        <view class="item-group" wx:for='{{refund_detail.meal_details}}' wx:for-item='meal_detail' wx:key='index'>
+            <view class="item-title">
+                <view class="item-date">{{meal_detail.refund_date}} {{meal_detail.refund_meal}}</view>
+                <view class="item-total">¥-{{meal_detail.refund_meal_subtotal}}</view>
+            </view>
+            <view class="item-detail" wx:for='{{meal_detail.goods_details}}' wx:for-item='goods_detail' wx:key='goods_id'>
+                <view class="goods-img">
+                    <image src="{{goods_detail.goods_image}}" />
+                </view>
+                <view class="item-info">
+                    <view class="goods-name">{{goods_detail.goods_name}}</view>
+                    <view class="item-subtotal">
+                        <view class="goods-price">¥{{goods_detail.goods_price}} * -{{goods_detail.goods_count}}{{goods_detail.goods_unit}}</view>
+                        <view class="goods-subtotal">¥-{{goods_detail.goods_subtotal}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

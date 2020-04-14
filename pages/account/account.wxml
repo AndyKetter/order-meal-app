@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="item">
+        <view class="item-title">账 号</view>
+        <view class="item-content">XCX200302000001</view>
+    </view>
+    <navigator url="../change-name/change-name">
+        <view class="item">
+            <view class="item-title">姓 名</view>
+            <view class="item-content">张六六</view>
+            <image class="item-image" src="../../assets/images/right-arrow.png" />
+        </view>
+    </navigator>
+
+    <navigator url="../change-sex/change-sex">
+        <view class="item">
+            <view class="item-title">性 别</view>
+            <view class="item-content">男</view>
+            <image class="item-image" src="../../assets/images/right-arrow.png" />
+        </view>
+    </navigator>
+
+
+    <view class="item">
+        <view class="item-title">生 日</view>
+        <picker class="item-content" mode="date" value="{{date}}" start="1900-01-01" end="2099-12-31" bindchange="bindDateChange">
+            <view class="picker">{{date}}</view>
+        </picker>
+        <image class="item-image" src="../../assets/images/right-arrow.png" />
+    </view>
+
+</view>

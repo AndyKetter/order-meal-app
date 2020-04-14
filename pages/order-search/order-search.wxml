@@ -1,0 +1,13 @@
+<view>
+    <view class="header">
+        <view class="search">
+            <input class="search-input" placeholder="输入订单号搜索" />
+            <view class="search-image">
+                <image class="search-image-ico" src="../../assets/images/search.png" />
+            </view>           
+        </view>
+    </view>
+    <view class="content" style="height:{{windowHeight}}px">
+        <image src="../../assets/images/search-bg.png" mode="widthFix" />
+    </view>
+</view>

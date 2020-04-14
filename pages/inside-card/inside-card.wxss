@@ -1,0 +1,49 @@
+page{
+    background-color: #F2F3F4;
+    font-size: 32rpx;
+    color: #303133;
+}
+
+.warper{
+    background-color: #fff;
+    margin-top: 20rpx; 
+}
+
+.item{
+    height: 100rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 40rpx;
+    border-bottom: 1px solid #F2F3F4;
+    box-sizing: border-box; 
+}
+
+.item text:first-of-type{
+    width: 160rpx;
+    color: #909399;
+    margin-right: 40rpx;
+}
+
+.item text:last-of-type{
+    flex: 1;
+    text-align: right;
+}
+
+.btn-group{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-unbind{
+    margin-top: 40rpx;
+    width: 90%;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+    color: #fff;
+    background-color: #2DD089;
+    border-radius: 50rpx;
+}

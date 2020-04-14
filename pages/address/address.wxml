@@ -1,0 +1,37 @@
+<view class="content">
+    <view class="item">
+        <view class="item-title">楼 名</view>
+        <picker class="item-picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <input class="item-picker-input" placeholder="请选择楼名" value="{{array[index]}}" />
+        </picker>
+        <image class="item-image" src="../../assets/images/right-arrow.png" /> 
+    </view>
+
+    <view class="item">
+        <view class="item-title">楼 层</view>
+        <picker class="item-picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <input class="item-picker-input" placeholder="请选择楼层" value="{{array[index]}}" />
+        </picker>
+        <image class="item-image" src="../../assets/images/right-arrow.png" /> 
+    </view>
+
+    <view class="item">
+        <view class="item-title">科 室</view>
+        <picker class="item-picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <input class="item-picker-input" placeholder="请选择科室" value="{{array[index]}}" />
+        </picker>
+        <image class="item-image" src="../../assets/images/right-arrow.png" /> 
+    </view>
+
+    <view class="item">
+        <view class="item-title">床 位</view>
+        <picker class="item-picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <input class="item-picker-input" placeholder="请选择床位" value="{{array[index]}}" />
+        </picker>
+        <image class="item-image" src="../../assets/images/right-arrow.png" /> 
+    </view>
+
+    <view class="btn-group">
+        <view class="btn-ok">确认修改地址</view>
+    </view>
+</view>

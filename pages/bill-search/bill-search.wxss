@@ -1,0 +1,40 @@
+page{
+    font-size: 28rpx;
+    font-weight: 300;
+    color: #303133;
+    background-color: #f0f0f0;
+}
+
+.header{
+    height: 75rpx;
+    font-size: 26rpx;
+    background-color: #01B269;
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 0 20rpx;
+    padding: 0 20rpx;
+}
+
+.search-input{
+    flex: 1;
+}
+
+.search-image{
+    width: 60rpx;
+    border-left: 1px solid #DCDFE6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
+}
+
+.search-image-ico{
+    width: 40rpx;
+    height: 40rpx;
+}

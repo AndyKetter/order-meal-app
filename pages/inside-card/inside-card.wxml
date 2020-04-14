@@ -1,0 +1,31 @@
+<view class="warper">
+    <view class="item">
+        <text space="ensp">{{personnelNumberTitle}}</text>
+        <text>01996</text>
+    </view>
+
+    <view class="item">
+        <text space="emsp">姓  名</text>
+        <text>张六六</text>
+    </view>
+
+    <view class="item">
+        <text space="emsp">{{departmentTitle}}</text>
+        <text>总务科</text>
+    </view>
+
+    <view class="item" hidden="{{personnelType == '职工'}}">
+        <text space="emsp">膳食类型</text>
+        <text>普食</text>
+    </view>
+
+    <view class="item">
+        <text space="emsp">余  额</text>
+        <text>¥685.6</text>
+    </view>
+</view>
+
+<view class="btn-group">
+    <view class="btn-unbind">解除绑定</view>
+    <view class="btn-unbind">余额充值</view>
+</view>

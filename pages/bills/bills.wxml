@@ -1,0 +1,18 @@
+<view>
+    <view class="header">
+        <navigator class="search" url="../bill-search/bill-search">
+            <view class="search-title">按账单日期搜索</view>
+            <view class="search-image">
+                <image class="search-image-ico" src="../../assets/images/search.png" />
+            </view>
+        </navigator>
+    </view>
+
+    <view class="content">
+        <navigator class="item" url="../bill-detail/bill-detail" wx:for="{{itemList}}" wx:key="index">
+            <view class="item-title">{{item.order_date}}</view>
+            <view class="item-content">¥{{item.order_subtotal}}</view>
+            <image class="item-image" src="../../assets/images/right-arrow.png" />
+        </navigator>
+    </view>
+</view>

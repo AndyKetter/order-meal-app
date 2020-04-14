@@ -1,0 +1,12 @@
+<view class="container" wx:for="{{problem_type_list}}" wx:key="problem_type_id">
+    <view class="header">
+        <view>{{item.problem_type_name}}</view>
+        <image src="../../assets/images/right-arrow.png" />
+    </view>
+    <view class="content">
+        <view class="content-item" wx:if="{{item.problem_type_id == problem_list.problem_type_id}}" wx:for="{{problem_list.contents}}" wx:for-item="content" wx:key="id">
+            <view>{{content.question}}</view>
+            <text>{{content.answer}}</text>
+        </view>
+    </view>   
+</view>

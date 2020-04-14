@@ -1,0 +1,211 @@
+page {
+    background-color: #f2f3f4;
+}
+
+.order{
+    margin: 20rpx 0;
+}
+
+.order-header {
+    background-color: #fff;
+    padding: 0 20rpx;
+    font-size: 30rpx;
+}
+
+.order-header-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80rpx;
+    border-bottom: 1px dashed #f2f3f4;
+    box-sizing: border-box;
+}
+
+.order-number-img {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.order-number {
+    flex: 1;
+    color: #303133;
+    margin: 0 20rpx;
+}
+
+.order-status {
+    font-size: 28rpx;
+    width: 120rpx;
+    text-align: right;
+}
+
+/* 已完成 */
+
+.status0 {
+    color: #2bd28a;
+}
+
+.order-header-address {
+    height: 80rpx;
+    color: #909399;
+    border-bottom: 1px dashed #f2f3f4;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.order-address-img {
+    width: 35rpx;
+    height: 40rpx;
+    margin-right: 25rpx;
+}
+
+.order-address {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.order-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80rpx;
+    color: #303133;
+}
+
+.order-time {
+    width: 360rpx;
+}
+
+.order-payment-type {
+    width: 160rpx;
+    text-align: center;
+}
+
+.order-subtotal {
+    flex: 1;
+    text-align: right;
+}
+
+.item-content {
+    font-size: 28rpx;
+    color: #606266;
+    background-color: #fff;
+    border-top: 1px solid #f2f3f4;
+    box-sizing: border-box;
+}
+
+.item-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    margin: 0 20rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+}
+
+.item-date{
+    color: #606266;
+}
+
+.item-total{
+    color: #303133;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 20rpx 10rpx 20rpx;
+    /* margin: 0 20rpx; */
+    font-size: 28rpx;
+    background-color: #FCFCFC;
+}
+
+.goods-img image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 15rpx;
+    margin-right: 10rpx;
+}
+
+.item-info {
+    flex: 1;
+    margin-left: 10rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.goods-name{
+    color: #303133;
+}
+
+.item-subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #606266;
+}
+
+.refund {
+    font-size: 30rpx;
+    background-color: #fff;
+    margin: 40rpx 0;
+}
+
+.refund-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80rpx;
+    padding: 0 20rpx;
+    border-bottom: 1px solid #f2f3f4;
+    box-sizing: border-box;
+}
+
+.refund-header-line{
+    width: 10rpx;
+    height: 30rpx;
+    background-color: #FD720A;
+}
+
+.refund-header-title {
+    width: 160rpx;
+    color: #FD720A;
+    margin: 0 20rpx;
+}
+
+.refund-header-total {
+    flex: 1;
+    text-align: right;
+    color: #FD720A;
+}
+
+.refund-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80rpx;
+    font-size: 28rpx;
+    color: #303133;
+    padding: 0 20rpx;
+}
+
+.refund-num{
+    width: 260rpx;
+}
+
+.refund-time {
+    width: 300rpx;
+    text-align: center;
+}
+
+.refund-subtotal{
+    flex: 1;
+    text-align: right;
+}
+
+

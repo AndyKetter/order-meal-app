@@ -1,0 +1,63 @@
+<wxs module="filters" src="../../utils/common.wxs"></wxs>
+<view>
+    <view class="header">
+        <view class="header-user">
+            <image class="header-image" src="../../assets/images/name.png" />
+            <view class="name">{{orders.user_name}}</view>
+            <image class="header-image" src="../../assets/images/phone.png" />
+            <view class="phone">{{orders.user_phone}}</view>
+        </view>
+        <view class="header-address">
+            <image class="header-image" src="../../assets/images/order-address.png" />
+            <text class="address">{{orders.address}}</text>
+            <text class="btn-address">修改地址</text>
+        </view>
+    </view>
+
+    <scroll-view class='scroll-view' scroll-with-animation scroll-y style="height:{{windowHeight}}px">
+        <!-- 商品明细 -->
+        <view class="order-content" wx:for="{{orders.details}}" wx:key="index">
+            <view class="order-date-meal">
+                <text>{{item.order_date}} {{item.order_meal}}</text> 
+                <text class="order-meal-subtotal">¥{{filters.toFix(item.meal_subtotal_amount)}}</text> 
+            </view>
+            <view class="order-detail" wx:for="{{item.meal_details}}" wx:key="goods_id">
+                <view class="detail-goods-image">
+                    <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1405304736,1966318522&fm=26&gp=0.jpg"></image>
+                </view>
+                <view class="goods-info">
+                    <view class="info-goods-name">{{item.goods_name}}</view>
+                    <view class="info-price-group">
+                        <view class="original_price" hidden="{{!item.original_price || item.original_price == item.current_price}}">¥{{filters.toFix(item.original_price)}}</view>
+                        <view class="current_price">¥{{filters.toFix(item.current_price)}}</view>×
+                        <view class="order-count">{{item.goods_count}}</view>
+                        <view class="goods-subtotal">¥{{filters.toFix(item.goods_subtotal_amount)}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <!-- 底部 -->
+    <view class="footer">
+        <view class="footer-total">
+            共<text>{{orders.order_count}}</text>件商品<text class="w-100"></text>   
+            优惠<text>¥{{orders.order_preferential_amount}}</text>
+            小计<text>¥{{orders.order_subtotal_amount}}</text>
+        </view>
+        <view class="footer-button">
+            <!-- <view> -->
+            <radio-group class="radio-group">
+                <view class="radio-item">
+                    <radio class="radio" value="0" checked="{{true}}" />
+                    <text class="radio-text">余额支付</text>
+                </view>
+                <view class="radio-item">
+                    <radio class="radio" value="1" checked="{{false}}" />
+                    <text class="radio-text">微信支付</text>
+                </view>
+            </radio-group>
+            <!-- </view> -->
+            <view class="footer-button-pay">确认支付</view>
+        </view>
+    </view>
+</view>

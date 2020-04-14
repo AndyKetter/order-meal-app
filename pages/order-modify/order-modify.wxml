@@ -1,0 +1,61 @@
+<view>
+    <view class="header">
+        <view class="header-user">
+            <image class="image-ico" src="../../assets/images/name.png" />
+            <view class="name">张六六</view>
+            <image class="image-ico" src="../../assets/images/phone.png"/>
+            <view class="phone">13999999999 </view>
+        </view>
+        <view class="header-address">
+            <image class="image-ico" src="../../assets/images/order-address.png" />
+            <view class="address">住院楼 9层 普通病区 20床</view>
+            <view class="btn-address">修改地址</view>
+        </view>
+
+        <view class="header-content">
+            <image class="image-ico" src="../../assets/images/order-number.png" />
+            <view class="order-number">200310000001</view>
+            <view class="order-time">2020-03-10 15:30:50</view>
+            <view class="order-payment-type">微信支付</view>
+        </view>
+    </view>
+
+    <scroll-view class='scroll-view' scroll-with-animation scroll-y style="height:{{windowHeight}}px">
+        <!-- 商品明细 -->
+        <view class="order-content" wx:for="{{constants}}" wx:key="index">
+            <view class="order-date-meal">
+                <view>{{item.order_date}} {{item.order_meal}}</view>
+                <!-- <text class="order-meal-subtotal">¥{{item.meal_subtotal}}</text>  -->
+            </view>
+            <view class="order-detail" wx:for="{{item.goods_details}}" wx:key="goods_id">
+                <view class="detail-goods-image">
+                    <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1405304736,1966318522&fm=26&gp=0.jpg"></image>
+                </view>
+                <view class="goods-info">
+                    <view class="info-goods-name">{{item.goods_name}}</view>
+                    <view class="info-other-group">
+                        <view class="other-group-price">
+                            <text class="original_price" hidden="{{!item.original_price || item.original_price == item.current_price}}">¥{{item.original_price}}</text>
+                            <text class="current_price"> ¥{{item.current_price}} </text>
+                            <text class="order-count">× {{item.order_count}}</text>
+                        </view>
+<!-- ﹣﹢× -->
+                        <view class="refund-button">
+                            <view class="refund-title">退订数量</view>
+                            <view class='button button-minus'>－</view>
+                            <view class='refund-count'>{{item.refund_count}}</view>
+                            <view class='button button-plus'>＋</view>
+                        </view>
+
+                    </view>
+                </view>
+
+            </view>
+        </view>
+    </scroll-view>
+</view>
+
+<!-- 底部 -->
+<view class="footer">
+    <view class="footer-button-pay">确认退订</view>
+</view>

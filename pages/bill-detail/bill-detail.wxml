@@ -1,0 +1,38 @@
+<wxs module="filters" src="../../utils/common.wxs"></wxs>
+<view class="header">
+    <view class="header-user">
+        <image class="image-ico" src="../../assets/images/name.png" />
+        <view class="name">{{billsData.user_name}}</view>
+        <image class="image-ico" src="../../assets/images/phone.png" />
+        <view class="phone">{{billsData.user_phone}}</view>
+    </view>
+</view>
+<scroll-view class='scroll-view' scroll-with-animation scroll-y style="height:{{windowHeight}}px">
+    <!-- 商品明细 -->
+    <view class="order-content" wx:for="{{billsData.bills_detail}}" wx:key="index">
+        <view class="order-date-meal">
+            <text>{{item.order_date}} {{item.order_meal}}</text>
+            <text class="order-meal-subtotal">¥{{filters.toFix(item.meal_subtotal)}}</text>
+        </view>
+        <view class="order-detail" wx:for="{{item.goods_details}}" wx:key="goods_id">
+            <view class="detail-goods-image">
+                <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1405304736,1966318522&fm=26&gp=0.jpg"></image>
+            </view>
+            <view class="goods-info">
+                <view class="info-goods-name">{{item.goods_name}}</view>
+                <view class="info-price-group">
+                    <text class="original_price" hidden="{{!item.original_price || item.original_price == item.current_price}}">¥{{filters.toFix(item.original_price)}}</text>
+                    <text class="current_price">¥{{filters.toFix(item.current_price)}}</text>×
+                    <text class="order-count">{{item.count}}</text>
+                    <text class="goods-subtotal">¥{{filters.toFix(item.subtotal)}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<!-- 底部 -->
+<view class="footer">
+    <view class="footer-total">
+        共<text>{{billsData.goods_total_count}}</text>件商品<text class="w-100"></text>优惠<text>¥{{billsData.preferential_total_amount}}</text>小计<text>¥{{billsData.bills_total_amount}}</text>
+    </view>
+</view>

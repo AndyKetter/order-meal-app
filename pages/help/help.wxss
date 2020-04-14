@@ -1,0 +1,54 @@
+page{
+    background-color: #F2F3F4;
+    color: #303133;
+    font-size: 32rpx;
+}
+
+.container{
+    background-color: #fff;
+}
+
+.header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100rpx;
+    padding: 0 20rpx;
+    border-bottom: 1px solid #F2F3F4;
+    box-sizing: border-box;
+}
+
+.header > view{
+    flex: 1;
+}
+
+.header > image{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.content{
+    background-color: #F8F8F8;
+    padding: 0 20rpx;
+}
+
+.content-item{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.content-item:last-of-type{
+    border: none;
+}
+
+.content-item > view{
+    font-size: 30rpx;
+    padding: 10px 0;
+}
+
+.content-item > text{
+    display: inline-block;
+    font-size: 28rpx;
+    color: #666;
+    padding-bottom: 10px;
+}
+
